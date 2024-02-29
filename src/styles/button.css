@@ -1,0 +1,41 @@
+.btn-cart, .btn-add-to-cart {
+    all: unset;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background: rgb(252, 184, 0);
+    border-radius: 5px;
+    border: 1px solid transparent;
+}
+
+.btn-cart:hover, .btn-add-to-cart:hover {
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.btn-cart {
+    margin: 20px 20px 20px auto;
+    max-width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+.btn-cart img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+.btn-cart span {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
