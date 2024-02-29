@@ -10,7 +10,7 @@ const Product = ({product, setProduct}) => {
     <div className="product" key={id}>
       <div className="thumbnail-container">
         <img src={thumbnail} alt="product"/>
-        <div className='discount'>{`-${discountPercentage}%`}</div>
+        {discountPercentage ? <div className='discount'>{`-${discountPercentage}%`}</div> : ''}
       </div>
       <div className="description-container">
         <div className="title">{title}</div>
@@ -19,7 +19,7 @@ const Product = ({product, setProduct}) => {
       </div>
       <div className="actions-container">
         <ProductPrice price={price} discountPercentage={discountPercentage}/>
-        <Button onClick={()=>setProduct(id)}>
+        <Button onClick={() => setProduct(id)}>
           Add to Cart
         </Button>
       </div>
