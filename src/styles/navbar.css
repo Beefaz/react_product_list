@@ -1,0 +1,15 @@
+.navbar {
+    width: 100%;
+}
+.navbar ul {
+    all: unset;
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.navbar a {
+
+}

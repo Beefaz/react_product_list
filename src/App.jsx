@@ -1,42 +1,33 @@
-import './App.css'
-import cartImage from './assets/images/svg/cart.svg'
-import Product from "./components/Product.jsx";
-import {products} from "./constants/constants.js";
-import {useState} from "react";
+import "./index.css";
+import "./App.css";
+import NavBar from "./components/NavBar.jsx"
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import Home from "./pages/Home.jsx";
+import States from "./pages/States.jsx";
 
-const cart = [];
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home/>,
+  },
+  {
+    path: "/states",
+    element: <States/>,
+  },
+]);
+
 const App = () => {
-  const [cartItemCount, setCartItemCount] = useState(0);
-
-  const getTotalItemsInCart = (cart) => cart.reduce((count, val) => val.amountInCart ? count + val.amountInCart : count, 0);
-
-  const setProduct = (id) => {
-    const itemIndex = cart.findIndex(item => item.id === id);
-    if (itemIndex >= 0) cart[itemIndex].amountInCart++;
-    if (itemIndex < 0) cart.push({
-      ...products.find(item => item.id === id),
-      amountInCart: 1,
-    })
-    setCartItemCount(getTotalItemsInCart(cart));
-    console.dir(cart);
-  }
-
-  const generateProducts = (array) => array.map((product =>
-      <Product
-        product={product}
-        key={product.id}
-        setProduct={setProduct}
-      />
-  ));
 
   return (
-    <div className="products">
-      <a href="#" className="btn-cart" id="cart-redirect">
-        <span id="cart-item-count">{cartItemCount}</span>
-        <img src={cartImage} alt="cart_icon"/>
-      </a>
-      {generateProducts(products)}
-    </div>
+    <>
+      <NavBar>
+        <a href={`/`}>Home</a>
+        <a href={`/states`}>States</a>
+      </NavBar>
+      <main className="main">
+        <RouterProvider router={router}/>
+      </main>
+    </>
   );
 }
 

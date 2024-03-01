@@ -1,8 +1,8 @@
 import '../styles/button.css';
 
-const Button = ({children, onClick}) => {
+const Button = ({children, onClick, className}) => {
   return (
-    <button className="btn-add-to-cart" onClick={onClick}>{children}</button>
+    <button className={className} onClick={onClick}>{children}</button>
   );
 }
 export default Button;

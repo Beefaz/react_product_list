@@ -1,0 +1,42 @@
+.calc {
+    display: flex;
+    justify-content: center;
+
+}
+
+.calc-controller {
+    display: grid;
+    grid-template-columns: repeat(4, min-content);
+    gap: 20px;
+    max-width: min-content;
+}
+
+.input {
+    grid-column: 1 / span 4;
+    min-height: 40px;
+    border: 1px solid black;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.numbers {
+    grid-column: 1 / span 3;
+    grid-row: 3 / span 2;
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    grid-template-rows: repeat(4, min-content);
+    gap: 20px;
+}
+
+.num-0 {
+    grid-column: 1 / span 3;
+}
+
+/*.actions {*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(1, min-content);*/
+/*    gap: 20px;*/
+/*    max-width: min-content;*/
+/*}*/
