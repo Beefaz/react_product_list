@@ -30,7 +30,7 @@
     gap: 20px;
 }
 
-.num-0 {
+.numbers button:last-child {
     grid-column: 1 / span 3;
 }
 

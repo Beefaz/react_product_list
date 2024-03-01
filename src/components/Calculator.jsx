@@ -7,9 +7,11 @@ const numbers = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
 const actions = ['+', '-', '*', '/', 'C', '='];
 const Calculator = () => {
   const [input, setInput] = useState('');
+
   const handleClick = (symbol) => {
     if (symbol === 'C') return setInput('');
     if (input.includes('=')) return;
+
     if (symbol === '=') try {
       return setInput(`${input} = ${evaluate(input)}`);
     } catch {
@@ -19,16 +21,10 @@ const Calculator = () => {
     return setInput(`${input}${symbol}`);
   }
 
-  const getButtonClasses = (symbol) => {
-    if (numbers.includes(symbol)) return `num-${symbol}`;
-    return undefined;
-  }
-
   const generateButtons = (arr) =>
     arr.map((symbol, index) =>
       <Button
         key={index}
-        className={getButtonClasses(symbol)}
         onClick={() => handleClick(symbol)}>
         {symbol === '*' ? '∗' : symbol}
       </Button>);
