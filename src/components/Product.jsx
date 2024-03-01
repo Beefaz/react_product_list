@@ -19,7 +19,7 @@ const Product = ({product, setProduct}) => {
       </div>
       <div className="actions-container">
         <ProductPrice price={price} discountPercentage={discountPercentage}/>
-        <Button setProduct={setProduct} className={'btn-add-to-cart'}>
+        <Button onClick={()=>setProduct(id)} className={'btn-add-to-cart'}>
           Add to Cart
         </Button>
       </div>
