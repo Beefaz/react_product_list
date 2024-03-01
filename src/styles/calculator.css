@@ -9,16 +9,30 @@
     grid-template-columns: repeat(4, min-content);
     gap: 20px;
     max-width: min-content;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 1px 1px 1px 3px black;
+    background: linear-gradient(
+            45deg,
+            #999 5%,
+            #fff 10%,
+            #ccc 30%,
+            #ddd 50%,
+            #ccc 70%,
+            #fff 80%,
+            #999 95%
+    );
 }
 
 .input {
     grid-column: 1 / span 4;
     min-height: 40px;
-    border: 1px solid black;
     border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: inset 1px 1px 1px 1px black;
+    background: aliceblue;
 }
 
 .numbers {
@@ -28,6 +42,10 @@
     grid-template-columns: repeat(3, min-content);
     grid-template-rows: repeat(4, min-content);
     gap: 20px;
+}
+
+.calc-controller button {
+    box-shadow: 1px 1px 1px 2px black;
 }
 
 .numbers button:last-child {

@@ -3,7 +3,7 @@ import Button from "../components/Button.jsx";
 import {useState} from "react";
 import {evaluate} from "mathjs";
 
-const numbers = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
+const numbers = [7, 8, 9, 4, 5, 6, 1, 2, 3, 0];
 const actions = ['+', '-', '*', '/', 'C', '='];
 const Calculator = () => {
   const [input, setInput] = useState('');
