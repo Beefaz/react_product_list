@@ -34,9 +34,3 @@
     grid-column: 1 / span 3;
 }
 
-/*.actions {*/
-/*    display: grid;*/
-/*    grid-template-columns: repeat(1, min-content);*/
-/*    gap: 20px;*/
-/*    max-width: min-content;*/
-/*}*/
