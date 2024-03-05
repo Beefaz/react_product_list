@@ -3,7 +3,6 @@ import Button from "./Button.jsx";
 import {generate} from "random-words";
 import {useState} from "react";
 import refreshImage from '../assets/images/svg/refresh.svg'
-import Product from "./Product.jsx";
 
 const rand = (min, max) => {
   min = Math.ceil(min);
