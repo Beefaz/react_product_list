@@ -2,6 +2,7 @@ import '../styles/states.css'
 import Button from "../components/Button.jsx";
 import {useState} from "react";
 import Calculator from "../components/Calculator.jsx";
+import PasswordGenerator from "../components/PasswordGenerator.jsx";
 
 const States = () => {
   const [count, setCount] = useState(0);
@@ -22,6 +23,8 @@ const States = () => {
       </div>
       <hr/>
       <Calculator/>
+      <hr/>
+      <PasswordGenerator/>
       <hr/>
     </section>
   );

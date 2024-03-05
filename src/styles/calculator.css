@@ -24,7 +24,7 @@
     );
 }
 
-.input {
+.calc .input {
     grid-column: 1 / span 4;
     min-height: 40px;
     border-radius: 8px;
@@ -35,7 +35,7 @@
     background: aliceblue;
 }
 
-.numbers {
+.calc .numbers {
     grid-column: 1 / span 3;
     grid-row: 3 / span 2;
     display: grid;
@@ -44,11 +44,11 @@
     gap: 20px;
 }
 
-.calc-controller button {
+.calc button {
     box-shadow: 1px 1px 1px 2px black;
 }
 
-.numbers button:last-child {
+.calc .numbers button:last-child {
     grid-column: 1 / span 3;
 }
 
