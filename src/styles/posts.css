@@ -1,11 +1,14 @@
-
 .posts {
     margin: 0 0 24px 0;
-    display: grid;
     gap: 24px;
-    grid-template-columns: repeat(3, 1fr);
     font-family: 'Poppins', sans-serif;
     color: rgb(34, 34, 34);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.posts .post {
+    flex: 1 1 290px;
 }
 .posts .post--thumbnail img {
     border-radius: 7px;
@@ -36,6 +39,7 @@
 }
 .posts .author-details {
     display: flex;
+    align-items: center;
     gap: 10px;
 }
 .posts .author-pic img {

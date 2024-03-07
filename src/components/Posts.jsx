@@ -4,15 +4,9 @@ import Post from "./Post.jsx";
 const Posts = ({posts}) => {
 
   const renderPosts = (posts) =>
-    posts.map(({title, category, image, content, author, authorRole, authorImage}, index) =>
+    posts.map((props, index) =>
       <Post
-        title={title}
-        category={category}
-        image={image}
-        content={content}
-        author={author}
-        authorRole={authorRole}
-        authorImage={authorImage}
+        {...props}
         key={index}
       />
     )
