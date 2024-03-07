@@ -1,10 +1,12 @@
 import '../styles/navbar.css'
 
 const NavBar = ({children}) => {
-  return <nav className="navbar">
-    <ul>
-      {children}
-    </ul>
-  </nav>
+  return <header>
+    <nav className="navbar">
+      <ul>
+        {children}
+      </ul>
+    </nav>
+  </header>
 };
 export default NavBar;

@@ -25,8 +25,11 @@
 }
 
 .calc .input {
+    padding: 10px;
+    text-align: center;
+    vertical-align: center;
     grid-column: 1 / span 4;
-    min-height: 40px;
+    min-height: 92px;
     border-radius: 8px;
     display: flex;
     justify-content: center;
@@ -39,7 +42,6 @@
     grid-column: 1 / span 3;
     grid-row: 3 / span 2;
     display: grid;
-    grid-template-columns: repeat(3, min-content);
     grid-template-rows: repeat(4, min-content);
     gap: 20px;
 }

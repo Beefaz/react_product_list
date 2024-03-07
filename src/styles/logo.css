@@ -1,0 +1,18 @@
+.logo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    color: #000000;
+}
+
+.logo img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    overflow: visible;
+    max-height: 50vw;
+}

@@ -21,7 +21,7 @@ const Calculator = () => {
     return setInput(`${input}${symbol}`);
   }
 
-  const generateButtons = (arr) =>
+  const renderButtons = (arr) =>
     arr.map((symbol, index) =>
       <Button
         key={index}
@@ -34,9 +34,9 @@ const Calculator = () => {
       <div className="calc-controller">
         <div className="input">{input}</div>
         <div className="numbers">
-          {generateButtons(numbers)}
+          {renderButtons(numbers)}
         </div>
-        {generateButtons(actions)}
+        {renderButtons(actions)}
       </div>
     </div>
   );

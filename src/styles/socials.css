@@ -1,0 +1,14 @@
+.social-links {
+    display: flex;
+    max-width: min-content;
+}
+.social-links a {
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-links img {
+    width: 20px;
+    height: 20px;
+}

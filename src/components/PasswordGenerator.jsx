@@ -190,8 +190,8 @@ const PasswordGenerator = () => {
           <div>
           </div>
         </div>
-        <div className={`copy-indicator${copied ? ' copied' : ''}`}>
-          <div className="copy-indicator-content">
+        <div className="copy-indicator-wrapper">
+          <div className={`copy-indicator${copied ? ' copied' : ''}`}>
             {copied ? 'Password copied' : 'Password not copied'}
           </div>
         </div>

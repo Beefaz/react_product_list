@@ -1,0 +1,65 @@
+.cart {
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.cart .table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+}
+
+.cart table {
+    width: 100%;
+}
+
+.cart table td {
+    padding: 15px;
+}
+
+.cart table, .cart th, .cart td {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+.cart .title {
+    text-align: center;
+}
+
+.cart .amount-control {
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.cart .amount-control div {
+    margin-top: 2px;
+    width: 3ch;
+    text-align: center;
+}
+
+.cart .amount-control button {
+    border: 2px solid #000000;
+    width: 30px;
+    height: 30px;
+    padding: unset;
+    font-weight: bold;
+    font-size: 16px;
+    padding-bottom: 4px;
+}
+
+.cart .price {
+    text-align: center;
+}
+
+.cart .actions {
+    text-align: center;
+}
+
+.cart .actions button {
+    text-align: center;
+    background: #ff8000;
+    color: #FFFFFF;
+}
+

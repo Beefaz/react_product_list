@@ -2,13 +2,14 @@ import cartImage from '../assets/images/svg/cart.svg'
 import Product from "../components/Product.jsx";
 import {products} from "../constants/constants.js";
 import {useState} from "react";
+import {initStorage, syncStorage} from "../constants/helpers.js";
 
-const cart = [];
+const cart = initStorage('cart');
+
+const getTotalItemsInCart = (cart) => cart.reduce((count, product) => product.amountInCart ? count + product.amountInCart : count, 0);
 
 const Home = () => {
-  const [cartItemCount, setCartItemCount] = useState(0);
-
-  const getTotalItemsInCart = (cart) => cart.reduce((count, val) => val.amountInCart ? count + val.amountInCart : count, 0);
+  const [cartItemCount, setCartItemCount] = useState(getTotalItemsInCart(cart));
 
   const setProduct = (id) => {
     const itemIndex = cart.findIndex(item => item.id === id);
@@ -17,8 +18,8 @@ const Home = () => {
       ...products.find(item => item.id === id),
       amountInCart: 1,
     })
+    syncStorage('cart', [...cart]);
     setCartItemCount(getTotalItemsInCart(cart));
-    console.dir(cartItemCount);
   }
 
   const generateProducts = (array) => array.map((product =>

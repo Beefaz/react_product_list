@@ -1,0 +1,47 @@
+.blog-navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+.blog-navbar .search input{
+    padding: 10px 20px 10px 50px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #212529;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius:  20px;
+}
+.blog-navbar .search img{
+    left: 20px;
+}
+
+.blog-navbar__right {
+    display: flex;
+    gap: 20px;
+}
+
+.blog-navbar__right button {
+    position: relative;
+    padding: 0 5px;
+}
+
+.blog-navbar .menu {
+    padding: 10px 20px;
+    position: absolute;
+    top: 101%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: white;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.blog-navbar .menu a:hover {
+    color: black;
+}
+

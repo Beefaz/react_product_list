@@ -1,0 +1,22 @@
+.search {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search img {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left:10px;
+}
+
+.search input {
+    padding: 10px 20px 10px 40px;
+    border-radius: 5px;
+    color: rgba(60, 60, 60, 0.78);
+    background-color: rgba(246, 246, 247, 1);
+    border: unset;
+    font: inherit;
+    font-weight: 600;
+}

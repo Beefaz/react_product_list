@@ -1,8 +1,8 @@
 import '../styles/button.css';
 
-const Button = ({children, onClick, className}) => {
+const Button = ({children, onClick, className, type = 'button'}) => {
   return (
-    <button className={className} onClick={onClick}>{children}</button>
+    <button className={className} onClick={onClick} type={type}>{children}</button>
   );
 }
 export default Button;
