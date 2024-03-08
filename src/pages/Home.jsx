@@ -3,12 +3,12 @@ import Product from "../components/Product.jsx";
 import {products} from "../constants/constants.js";
 import {useState} from "react";
 import {initStorage, syncStorage} from "../constants/helpers.js";
-
-const cart = initStorage('cart');
+import {Link} from "react-router-dom";
 
 const getTotalItemsInCart = (cart) => cart.reduce((count, product) => product.amountInCart ? count + product.amountInCart : count, 0);
 
 const Home = () => {
+  const cart = initStorage('cart');
   const [cartItemCount, setCartItemCount] = useState(getTotalItemsInCart(cart));
 
   const setProduct = (id) => {
@@ -22,7 +22,7 @@ const Home = () => {
     setCartItemCount(getTotalItemsInCart(cart));
   }
 
-  const generateProducts = (array) => array.map((product =>
+  const renderProducts = (array) => array.map((product =>
       <Product
         product={product}
         key={product.id}
@@ -32,11 +32,13 @@ const Home = () => {
 
   return (
     <div className="products">
-      <a href="#" className="btn-cart" id="cart-redirect">
-        <span id="cart-item-count">{cartItemCount}</span>
-        <img src={cartImage} alt="cart_icon"/>
-      </a>
-      {generateProducts(products)}
+      <Link to={'/cart'}>
+        <div className="btn-cart" id="cart-redirect">
+          <span id="cart-item-count">{cartItemCount}</span>
+          <img src={cartImage} alt="cart_icon"/>
+        </div>
+      </Link>
+      {renderProducts(products)}
     </div>
   );
 }

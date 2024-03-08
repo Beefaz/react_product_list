@@ -1,12 +1,16 @@
 import '../styles/navbar.css'
+import {Link} from "react-router-dom";
 
-const NavBar = ({children}) => {
+const renderLinks = (links) => links.map(({path, name}, index) => <li key={index}><Link to={path}>{name}</Link></li>)
+
+const NavBar = ({links}) => {
+
   return <header>
     <nav className="navbar">
       <ul>
-        {children}
-      </ul>
-    </nav>
-  </header>
+        {renderLinks(links)}
+    </ul>
+  </nav>
+</header>
 };
 export default NavBar;

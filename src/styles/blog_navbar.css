@@ -43,16 +43,29 @@
 }
 
 .blog-navbar .menu {
-    padding: 10px 20px;
     position: absolute;
     top: 101%;
     right: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
     background: white;
     border-radius: 5px;
     border: 2px solid black;
+}
+
+.blog-navbar .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.blog-navbar .menu li {
+    display: flex;
+}
+
+.blog-navbar .menu a {
+    padding: 5px 10px;
 }
 
 .blog-navbar .menu a:hover {

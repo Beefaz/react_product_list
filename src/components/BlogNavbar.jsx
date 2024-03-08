@@ -5,6 +5,9 @@ import Socials from "./Socials.jsx";
 import Button from "./Button.jsx";
 import Hamburger from "./Hamburger.jsx"
 import {useState} from "react";
+import {Link} from "react-router-dom";
+
+const renderLinks = (links) => links.map(({path, name}, index) => <li key={index}><Link to={path}>{name}</Link></li>)
 
 const NavBar = ({links}) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,7 +21,9 @@ const NavBar = ({links}) => {
         <Hamburger></Hamburger>
         {menuOpen &&
           <nav className="menu">
-            {links}
+            <ul>
+            {renderLinks(links)}
+            </ul>
           </nav>
         }
       </Button>
