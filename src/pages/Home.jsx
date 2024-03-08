@@ -32,12 +32,12 @@ const Home = () => {
 
   return (
     <div className="products">
-      <Link to={'/cart'}>
-        <div className="btn-cart" id="cart-redirect">
+      <div className="btn-cart" id="cart-redirect">
+        <Link to={'/cart'}>
           <span id="cart-item-count">{cartItemCount}</span>
           <img src={cartImage} alt="cart_icon"/>
-        </div>
-      </Link>
+        </Link>
+      </div>
       {renderProducts(products)}
     </div>
   );
